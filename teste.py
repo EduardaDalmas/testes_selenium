@@ -7,13 +7,13 @@ driver = webdriver.Chrome()
 driver.get('https://www.saucedemo.com/')
 
 #pegar o elemento usuário
-campo_usuario = driver.find_element('#user-name').send_keys('standard_user')
+campo_usuario = driver.find_element('css selector', '#user-name').send_keys('standard_user')
 
 #pegar o elemento senha
-campo_senha = driver.find_element('#password').send_keys('secret_sauce')
+campo_senha = driver.find_element('css selector', '#password').send_keys('secret_sauce')
 
 #pegar o elemento botão
-botao_login = driver.find_element('#login-button').click()
+botao_login = driver.find_element('css selector', '#login-button').click()
 
 #fechar o navegador
 driver.quit()
